@@ -3,8 +3,8 @@ const puppeteer = require('puppeteer');
 (async () => {
 
     // setup and open a browser 
-    const browser = await puppeteer.launch({ headless: false, slowMo: 150 }); //to watch simulation slowly
-    // const browser = await puppeteer.launch({ headless: true }); //to do not watch evolution and faster
+    //const browser = await puppeteer.launch({ headless: false, slowMo: 150 }); //to watch simulation slowly
+    const browser = await puppeteer.launch({ headless: true }); //to do not watch evolution and faster
     const page = await browser.newPage();
     await page.goto('http://localhost:3000/')
 
