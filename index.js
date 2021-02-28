@@ -6,7 +6,7 @@ const puppeteer = require('puppeteer');
     await page.goto('http://localhost:3000/')
     await page.type("#name", "My name")
     await page.type("#email", "email@mail.com")
-    await page.select('#root>div>div>div>div>form>div:nth-child(4)>select', '2')
+    await page.select('#selectYears', '2')
     await page.$eval('#exampleCheck1', check => check.checked = true)
     // await page.click("#windows",{clickCount:1}); //example to check in radio button
     await page.type("#phone", "666555444")
