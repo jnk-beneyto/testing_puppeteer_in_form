@@ -3,9 +3,10 @@ const puppeteer = require('puppeteer');
 (async () => {
     const browser = await puppeteer.launch({ headless: false, slowMo: 150 });
     const page = await browser.newPage();
-    await page.goto('http://localhost:3001/')
+    await page.goto('http://localhost:3000/')
     await page.type("#name", "My name")
     await page.type("#email", "email@mail.com")
+    await page.select('#root>div>div>div>div>form>div:nth-child(4)>select', '2')
     await page.type("#phone", "666555444")
     await page.type("#pwd", "mypassword")
     await page.type("#rpwd", "mypassword")
